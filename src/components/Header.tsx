@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { LifeBuoy, CarFront, HelpCircle, Menu, Moon, Sun } from 'lucide-react';
@@ -17,7 +17,7 @@ function ThemeToggle() {
     return (
         <DropdownMenu>
         <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" className="text-gold-text hover:bg-white/5">
+            <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
             <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>
@@ -41,26 +41,26 @@ export default function Header() {
   ];
 
   return (
-    <header className="hero-premium sticky top-0 z-40 border-b gold-border">
+    <header className="hero-moderno sticky top-0 z-40 shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-3 text-white hover:text-accent transition-colors">
-            <div className="gold-border rounded-lg p-1.5 bg-white/5">
-              <CarFront className="h-6 w-6 gold-text" />
+          <Link href="/" className="flex items-center gap-2 text-white hover:text-white/80 transition-colors">
+            <div className="bg-white/20 p-1.5 rounded-lg">
+              <CarFront className="h-6 w-6" />
             </div>
-            <span className="font-headline text-xl font-bold tracking-wider gold-text">Renta Cars ESA</span>
+            <span className="font-headline text-xl font-bold tracking-tight">Renta Cars ESA</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-               <Button variant="ghost" asChild key={link.href} className="text-gray-300 hover:text-accent hover:bg-white/5">
+               <Button variant="ghost" asChild key={link.href} className="text-white/90 hover:text-white hover:bg-white/15 rounded-lg">
                 <Link href={link.href} target={link.target} className="flex items-center gap-2">
                     {link.icon}
                     <span>{link.label}</span>
                 </Link>
             </Button>
             ))}
-            <div className="w-px h-6 bg-accent/20 mx-2" />
+            <div className="w-px h-6 bg-white/20 mx-2" />
             <ThemeToggle />
           </nav>
 
@@ -68,18 +68,18 @@ export default function Header() {
              <ThemeToggle />
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-accent hover:bg-white/5">
+                <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-[hsl(222,47%,14%)] text-white border-l gold-border">
+              <SheetContent side="right" className="bg-white dark:bg-gray-900">
                 <nav className="flex flex-col gap-4 mt-8">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
                       target={link.target}
-                      className="text-lg font-medium flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 hover:text-accent transition-colors"
+                      className="text-lg font-medium flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors"
                     >
                       {link.icon}
                       {link.label}
