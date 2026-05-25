@@ -1,67 +1,59 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 215 30% 18%;
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
     --card: 0 0% 100%;
-    --card-foreground: 215 30% 18%;
+    --card-foreground: 215 28% 17%;
     --popover: 0 0% 100%;
-    --popover-foreground: 215 30% 18%;
-    --primary: 215 55% 42%;
+    --popover-foreground: 215 28% 17%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 215 25% 94%;
-    --secondary-foreground: 215 55% 35%;
-    --muted: 215 15% 92%;
-    --muted-foreground: 215 15% 45%;
-    --accent: 25 85% 55%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 217 91% 45%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 70% 50%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 215 15% 85%;
-    --input: 215 15% 85%;
-    --ring: 215 55% 42%;
-    --chart-1: 215 55% 42%;
-    --chart-2: 25 85% 55%;
-    --chart-3: 160 55% 40%;
-    --chart-4: 300 60% 50%;
-    --chart-5: 45 80% 50%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 258 90% 66%;
+    --chart-3: 160 60% 45%;
+    --chart-4: 30 80% 55%;
+    --chart-5: 340 75% 55%;
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 215 30% 8%;
-    --foreground: 0 0% 90%;
+    --background: 215 28% 9%;
+    --foreground: 0 0% 95%;
     --card: 215 25% 14%;
-    --card-foreground: 0 0% 90%;
+    --card-foreground: 0 0% 95%;
     --popover: 215 25% 14%;
-    --popover-foreground: 0 0% 90%;
-    --primary: 215 55% 55%;
-    --primary-foreground: 215 30% 8%;
-    --secondary: 215 25% 18%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 20% 18%;
     --secondary-foreground: 0 0% 90%;
-    --muted: 215 25% 18%;
-    --muted-foreground: 215 15% 60%;
-    --accent: 25 80% 55%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 12% 60%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62% 35%;
     --destructive-foreground: 0 0% 90%;
-    --border: 215 20% 25%;
-    --input: 215 20% 25%;
-    --ring: 215 55% 55%;
+    --border: 215 15% 25%;
+    --input: 215 15% 25%;
+    --ring: 217 91% 60%;
   }
 }
 
@@ -75,7 +67,7 @@ body {
 }
 
 @layer components {
-  .hero-moderno {
-    background: linear-gradient(135deg, hsl(215 55% 42%), hsl(230 50% 50%));
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(217 91% 60%), hsl(210 85% 50%));
   }
 }
