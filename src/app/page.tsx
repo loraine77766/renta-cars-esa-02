@@ -5,7 +5,6 @@ import { cars } from '@/lib/cars';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { MessageSquare, Clock, ShieldCheck, ListChecks, Map, CalendarSearch, Car, User, CreditCard, MailCheck, ArrowRight, Star } from 'lucide-react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const sortedCars = [...cars].sort((a, b) => a.pricePerDay - b.pricePerDay);
@@ -36,12 +35,12 @@ export default function Home() {
               Vehiculos de calidad con el respaldo y la confianza que mereces.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-bold rounded-lg px-8 shadow-lg">
-                <Link href="/autos">Ver Flota <ArrowRight className="ml-2 h-5 w-5" /></Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/40 text-white hover:bg-white/10 rounded-lg px-8">
-                <Link href="#como-funciona">Como funciona?</Link>
-              </Button>
+              <a href="/autos" className="inline-flex items-center justify-center gap-2 h-11 bg-white text-primary hover:bg-white/90 font-bold rounded-lg px-8 shadow-lg transition-all">
+                Ver Flota <ArrowRight className="h-5 w-5" />
+              </a>
+              <a href="#como-funciona" className="inline-flex items-center justify-center gap-2 h-11 border-2 border-white/40 text-white hover:bg-white/10 rounded-lg px-8 transition-all">
+                Como funciona?
+              </a>
             </div>
           </div>
         </section>
@@ -72,9 +71,9 @@ export default function Home() {
                 <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Flota Destacada</h2>
                 <p className="text-muted-foreground mt-2">Seleccion exclusiva</p>
               </div>
-              <Button asChild variant="outline" className="hidden sm:flex border-primary/30 text-primary hover:bg-primary hover:text-white rounded-lg">
-                <Link href="/autos">Ver todos <ArrowRight className="ml-2 h-4 w-4" /></Link>
-              </Button>
+              <Link href="/autos" className="hidden sm:inline-flex items-center gap-2 border-2 border-primary/30 text-primary hover:bg-primary hover:text-white rounded-lg px-4 py-2 transition-all">
+                Ver todos <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
             <CarList cars={recommendedCars} />
           </div>
@@ -148,9 +147,9 @@ export default function Home() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-headline text-3xl font-bold text-white mb-4">Viaja con estilo</h2>
             <p className="text-white/80 mb-8 max-w-lg mx-auto">Reserva tu auto hoy</p>
-            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-bold rounded-lg px-10 shadow-lg">
-              <Link href="/autos">Ver Flota <ArrowRight className="ml-2 h-5 w-5" /></Link>
-            </Button>
+            <a href="/autos" className="inline-flex items-center justify-center gap-2 h-11 bg-white text-primary hover:bg-white/90 font-bold rounded-lg px-10 shadow-lg transition-all">
+              Ver Flota <ArrowRight className="h-5 w-5" />
+            </a>
           </div>
         </section>
 
